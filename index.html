@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800" style="border: 1px dotted"></canvas>
+		<div id="toolbar">
+			<button class="incSpeed">+</button>
+			<button class="decSpeed">-</button>
+		</div>
+		<script src="AnimObject.js"></script>
+		<script src="App.js"></script>
+		<script type="text/javascript">
+			var app = app || new App(document.getElementById('canvas'));
+			app.setupToolbar();
+			app.createAnimObjects(15);
+			app.renderAnimObjects();
+			app.loop();
+		</script>
+	</body>
+</html>
